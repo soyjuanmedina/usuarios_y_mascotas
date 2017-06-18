@@ -15,28 +15,6 @@
   <%= @user.email %>
 </p>
 
-<h2>Mascotas</h2>
-<% @user.pets.each do |pet| %>
-  <p>
-    <strong>Mascota:</strong>
-    <%= pet.nombre %>
-  </p>
-
-  <p>
-    <strong>Edad:</strong>
-    <%= pet.edad %>
-  </p>
-
-  <p>
-    <strong>Sexo:</strong>
-    <%= pet.sexo %>
-  </p>
-
-  <p>
-    <strong>Tipo:</strong>
-    <%= pet.tipo %>
-  </p>
-<% end %>
 
 <h2>Añadir una mascota:</h2>
 <%= form_for([@user, @user.pets.build]) do |f| %>
@@ -46,24 +24,23 @@
   </p>
   <p>
     <%= f.label :edad %><br>
-    <%= f.text_field :edad %>
+    <%= f.decimal_field :edad %>
   </p>
   <p>
     <%= f.label :sexo %><br>
-    <%= f.text_field :sexo %>
+    <%= f.integer_field :sexo %>
   </p>
   <p>
     <%= f.label :tipo %><br>
-    <%= f.text_field :tipo %>
+    <%= f.integer_field :tipo %>
   </p>
   <p>
     <%= f.label :alive %><br>
-    <%= f.text_field :alive %>
+    <%= f.boolean_field :alive %>
   </p>
     <%= f.submit %>
   </p>
 <% end %>
 
 <%= link_to 'Editar', edit_user_path(@user) %> |
-
 <%= link_to 'Volver', users_path %>

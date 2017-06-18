@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  edad: 9.99
+  sexo: 1
+  tipo: 1
+  alive: MyString
+  boolean: MyString
+  user: one
+
+two:
+  nombre: MyString
+  edad: 9.99
+  sexo: 1
+  tipo: 1
+  alive: MyString
+  boolean: MyString
+  user: two
