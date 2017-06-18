@@ -1,0 +1,21 @@
+<%= render 'navbar_users' %>
+
+
+<h1>Listado de usuarios</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Email</th>
+  </tr>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.surname %></td>
+      <td><%= user.email %></td>
+      <td><%= link_to 'Show', user_path(user) %></td>
+    </tr>
+  <% end %>
+</table>
