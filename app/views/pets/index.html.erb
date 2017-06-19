@@ -1,0 +1,22 @@
+<%= render 'navbar_pets' %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Listado de Mascotas</h3>
+  </div>
+  <div class="panel-body">
+    <table width=80%>
+    <% @pets.each do |pet| %>
+      <tr>
+        <td width=75%><%= pet.nombre %></td>
+        
+      </tr>
+    <% end %>
+    <table>
+  </div>
+</div>
+<hr>
+
+ <p><a href="#" class="btn btn-primary" role="button">Nuevo usuario</a></p>
+
+<%= link_to 'Nuevo usuario', new_user_path %>

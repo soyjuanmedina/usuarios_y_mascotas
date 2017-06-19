@@ -1,46 +1,20 @@
-<%= render 'navbar_users' %>
-
-<p>
-  <strong>Nombre:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Apellido:</strong>
-  <%= @user.surname %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<%= render 'navbar_pets' %>
 
 
-<h2>Añadir una mascota:</h2>
-<%= form_for([@user, @user.pets.build]) do |f| %>
-  <p>
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
-  </p>
-  <p>
-    <%= f.label :edad %><br>
-    <%= f.decimal_field :edad %>
-  </p>
-  <p>
-    <%= f.label :sexo %><br>
-    <%= f.integer_field :sexo %>
-  </p>
-  <p>
-    <%= f.label :tipo %><br>
-    <%= f.integer_field :tipo %>
-  </p>
-  <p>
-    <%= f.label :alive %><br>
-    <%= f.boolean_field :alive %>
-  </p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Ficha de mascota:</h3>
+  </div>
+  <div class="panel-body">
+    Nombre: <%= @pet.nombre %><br />
+    Dueño:
+  </div>
+</div>
 
-<%= link_to 'Editar', edit_user_path(@user) %> |
-<%= link_to 'Volver', users_path %>
+
+
+
+
+<%= link_to 'Editar', edit_user_pet_path(@user) %> |
+
+<%= link_to 'Volver', user_pets_path %>
