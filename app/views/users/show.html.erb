@@ -1,6 +1,5 @@
 <%= render 'navbar_users' %>
 
-
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Ficha de usuario:</h3>
@@ -36,9 +35,6 @@
       <table>
       </div>
     </div>
-
-
-
   </div>
 </div>
 
@@ -58,11 +54,11 @@
       </p>
       <p>
         <%= f.label :sexo %><br>
-        <%= f.text_field :sexo %>
+        <%= f.select :sexo, options_for_select([['Macho', 'macho'], ['Hembra', 'hembra']]) %>
       </p>
       <p>
         <%= f.label :tipo %><br>
-        <%= f.text_field :tipo %>
+        <%= f.select :tipo, options_for_select([['Dog', 'Dog'], ['Rat', 'Rat'], ['Cat', 'Cat'], ['Chinchilla', 'Chinchilla']]) %>
       </p>
       <p>
         <%= f.label :alive %><br>
@@ -74,9 +70,5 @@
   </div>
 </div>
 
-
-
-
 <%= link_to 'Editar', edit_user_path(@user) %> |
-
 <%= link_to 'Volver', users_path %>
